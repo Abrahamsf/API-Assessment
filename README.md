@@ -3,10 +3,10 @@ A simple GET call and assertions with Robot Framework
 Externalised Data via a csv file.
 
 Tools/Software needed to run automation code:
-  -Python 2.7..(pip should be installed as well with installation)-https://www.python.org/downloads/release/python-2715/
-  -Pycharm (Community Edition)-https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
-  -Robot Framework(pip install robotframework)-https://github.com/robotframework/robotframework/blob/master/INSTALL.rst 
-  -External Libraries  - RequestsLibrary-https://github.com/bulkan/robotframework-requests
+  - Python 2.7..(pip should be installed as well with installation)-https://www.python.org/downloads/release/python-2715/
+  - Pycharm (Community Edition)-https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
+  - Robot Framework(pip install robotframework)-https://github.com/robotframework/robotframework/blob/master/INSTALL.rst 
+  - External Libraries  - RequestsLibrary-https://github.com/bulkan/robotframework-requests
                        - CSVLibrary-https://github.com/s4int/robotframework-CSVLibrary
                       
 
