@@ -6,15 +6,16 @@ Tools/Software needed to run automation code:
   - Python 2.7..(pip should be installed as well with installation)-https://www.python.org/downloads/release/python-2715/
   - Pycharm (Community Edition)-https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&code=PCC
   - Robot Framework(pip install robotframework)-https://github.com/robotframework/robotframework/blob/master/INSTALL.rst 
-  - External Libraries  - RequestsLibrary-https://github.com/bulkan/robotframework-requests
-                       - CSVLibrary-https://github.com/s4int/robotframework-CSVLibrary
+  - External Libraries
+       1. RequestsLibrary - https://github.com/bulkan/robotframework-requests
+       2. CSVLibrary      - https://github.com/s4int/robotframework-CSVLibrary
                       
 
 Structure of Code:
  - All data is externalised via a csv data sheet.
  - This csv file is stored in the "Data" folder and is named "AssessmentE2E.csv".
  - The data(rows in file) controls the amount of tests.
- - The code is split between different classes for scalability 
+ - The code is split between different classes for scalability which can be located within the "Resources/API_Testing" 
     1. API_Calls.robot - Contains all code to do the API call.
     2. Asserts.robot   - Contains all assertions.
     3. Common.robot    - Contains all common keywords/functions used.
