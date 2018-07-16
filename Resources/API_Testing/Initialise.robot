@@ -24,10 +24,16 @@ Initialise_Environment
 
     #Logic added for the ability to run on different environments depending on data provided
     run keyword if  '${Env}' == 'dev'  SetDev_Environment
+    run keyword if  '${Env}' == 'devneg'  SetDevNeg_Environment
 
 SetDev_Environment
     set suite variable  ${S_URL_Srv}  api.tmsandbox.co.nz
     set suite variable  ${S_URL_Env}  /v1/Categories/6327/Details.json
+    set suite variable  ${S_SESSION_URI}  https://${S_URL_Srv}
+
+SetDevNeg_Environment
+    set suite variable  ${S_URL_Srv}  api.tmsandbox.co.nz
+    set suite variable  ${S_URL_Env}  /v1/Categories/6327/Details.json/
     set suite variable  ${S_SESSION_URI}  https://${S_URL_Srv}
 
 SetUat_Environment

@@ -1,7 +1,6 @@
 *** Settings ***
 Library  RequestsLibrary
 Library  BuiltIn
-Library  Collections
 Library  String
 
 Resource  ../API_Testing/Common.robot
@@ -25,20 +24,16 @@ Carbon_Credits_Positive_Asserts
     #Asserts
     dictionary should contain item  ${json}  Name  ${test_data["Name"]}                     #Name Assertion
     should be equal as strings  ${canRelist_result}  ${canRelist_data}                      #CanRelist Assertion
-    should contain  ${json["Promotions"][1]}  ${test_data["PromoGalleryDesc"]}              #Promotions Gallery Description Assertion
+    should contain  ${json["Promotions"][1]["Description"]}  ${test_data["PromoGalleryDesc"]}              #Promotions Gallery Description Assertion
 
-    log to console  --Carbon Credits Positive Asserts Passed
+    log to console  --Carbon Credits Positive Asserts Complete
 
 
 Carbon_Credits_Negative_Asserts
     [Arguments]  ${json}  ${test_data}
 
-    log to console  --Authenticate negative asserts
-
-    ${Error_description} =  get from dictionary  ${json["ErrorList"][2]}  Description
-
-    log  ${Error_description}
-    log to console  xxx Error Description= ${Error_description}
-
+    should contain  ${json}  ${test_data["ErrorMessage"]}
+    log  ${json}
+    log to console  --Carbon Credits Negative Asserts Complete
 
 #--------------------------------------------------------------------

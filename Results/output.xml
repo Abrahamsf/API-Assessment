@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180713 11:24:22.335" generator="Robot 3.0.2 (Python 2.7.14 on darwin)">
+<robot generated="20180716 11:55:59.833" generator="Robot 3.0.2 (Python 2.7.14 on darwin)">
 <suite source="/Users/Fuad/Documents/Development/RF Scripts/Assessment/Tests/Assessment_E2E.robot" id="s1" name="Assessment E2E">
 <kw type="setup" name="Read test data from CSV" library="Initialise">
 <kw name="Read Csv File To Associative" library="CSVLibrary">
@@ -10,8 +10,8 @@
 <assign>
 <var>@{test_data_dict}</var>
 </assign>
-<msg timestamp="20180713 11:24:22.495" level="INFO">@{test_data_dict} = [ {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestType': 'Positive', 'N...</msg>
-<status status="PASS" endtime="20180713 11:24:22.495" starttime="20180713 11:24:22.494"></status>
+<msg timestamp="20180716 11:56:00.176" level="INFO">@{test_data_dict} = [ {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'ErrorMessage': '', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestT...</msg>
+<status status="PASS" endtime="20180716 11:56:00.176" starttime="20180716 11:56:00.174"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -19,22 +19,22 @@
 <arg>@{test_data}</arg>
 <arg>@{test_data_dict}</arg>
 </arguments>
-<msg timestamp="20180713 11:24:22.495" level="INFO">@{test_data} = [ {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestType': 'Positive', 'N...</msg>
-<status status="PASS" endtime="20180713 11:24:22.495" starttime="20180713 11:24:22.495"></status>
+<msg timestamp="20180716 11:56:00.177" level="INFO">@{test_data} = [ {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'ErrorMessage': '', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestT...</msg>
+<status status="PASS" endtime="20180716 11:56:00.177" starttime="20180716 11:56:00.176"></status>
 </kw>
-<status status="PASS" endtime="20180713 11:24:22.496" starttime="20180713 11:24:22.494"></status>
+<status status="PASS" endtime="20180716 11:56:00.177" starttime="20180716 11:56:00.174"></status>
 </kw>
 <test id="s1-t1" name="Run_Assessment_E2E">
 <kw type="for" name="${DATA_ROW} IN [ @{test_data} ]">
-<kw type="foritem" name="${DATA_ROW} = {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestType': 'Positive', 'Nam...">
+<kw type="foritem" name="${DATA_ROW} = {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'ErrorMessage': '', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestTyp...">
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
 <arguments>
 <arg>${D_DATASET}</arg>
 <arg>${DATA_ROW}</arg>
 </arguments>
-<msg timestamp="20180713 11:24:22.497" level="INFO">${D_DATASET} = {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestType': 'Positive', 'Nam...</msg>
-<status status="PASS" endtime="20180713 11:24:22.497" starttime="20180713 11:24:22.496"></status>
+<msg timestamp="20180716 11:56:00.179" level="INFO">${D_DATASET} = {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'ErrorMessage': '', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestTyp...</msg>
+<status status="PASS" endtime="20180716 11:56:00.180" starttime="20180716 11:56:00.179"></status>
 </kw>
 <kw name="Initialise_Environment" library="Initialise">
 <arguments>
@@ -48,8 +48,8 @@
 <assign>
 <var>${Env}</var>
 </assign>
-<msg timestamp="20180713 11:24:22.497" level="INFO">${Env} = dev</msg>
-<status status="PASS" endtime="20180713 11:24:22.497" starttime="20180713 11:24:22.497"></status>
+<msg timestamp="20180716 11:56:00.181" level="INFO">${Env} = dev</msg>
+<status status="PASS" endtime="20180716 11:56:00.181" starttime="20180716 11:56:00.180"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -64,8 +64,8 @@
 <arg>${S_URL_Srv}</arg>
 <arg>api.tmsandbox.co.nz</arg>
 </arguments>
-<msg timestamp="20180713 11:24:22.498" level="INFO">${S_URL_Srv} = api.tmsandbox.co.nz</msg>
-<status status="PASS" endtime="20180713 11:24:22.498" starttime="20180713 11:24:22.498"></status>
+<msg timestamp="20180716 11:56:00.183" level="INFO">${S_URL_Srv} = api.tmsandbox.co.nz</msg>
+<status status="PASS" endtime="20180716 11:56:00.183" starttime="20180716 11:56:00.183"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -73,8 +73,8 @@
 <arg>${S_URL_Env}</arg>
 <arg>/v1/Categories/6327/Details.json</arg>
 </arguments>
-<msg timestamp="20180713 11:24:22.499" level="INFO">${S_URL_Env} = /v1/Categories/6327/Details.json</msg>
-<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.498"></status>
+<msg timestamp="20180716 11:56:00.184" level="INFO">${S_URL_Env} = /v1/Categories/6327/Details.json</msg>
+<status status="PASS" endtime="20180716 11:56:00.184" starttime="20180716 11:56:00.184"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -82,14 +82,22 @@
 <arg>${S_SESSION_URI}</arg>
 <arg>https://${S_URL_Srv}</arg>
 </arguments>
-<msg timestamp="20180713 11:24:22.499" level="INFO">${S_SESSION_URI} = https://api.tmsandbox.co.nz</msg>
-<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.499"></status>
+<msg timestamp="20180716 11:56:00.186" level="INFO">${S_SESSION_URI} = https://api.tmsandbox.co.nz</msg>
+<status status="PASS" endtime="20180716 11:56:00.186" starttime="20180716 11:56:00.185"></status>
 </kw>
-<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.498"></status>
+<status status="PASS" endtime="20180716 11:56:00.187" starttime="20180716 11:56:00.182"></status>
 </kw>
-<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.498"></status>
+<status status="PASS" endtime="20180716 11:56:00.187" starttime="20180716 11:56:00.181"></status>
 </kw>
-<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.497"></status>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Env}' == 'devneg'</arg>
+<arg>SetDevNeg_Environment</arg>
+</arguments>
+<status status="PASS" endtime="20180716 11:56:00.189" starttime="20180716 11:56:00.188"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:00.189" starttime="20180716 11:56:00.180"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -113,10 +121,10 @@
 <arg>${S_PARAMS}</arg>
 <arg>${params}</arg>
 </arguments>
-<msg timestamp="20180713 11:24:22.501" level="INFO">${S_PARAMS} = catalogue=false</msg>
-<status status="PASS" endtime="20180713 11:24:22.501" starttime="20180713 11:24:22.501"></status>
+<msg timestamp="20180716 11:56:00.195" level="INFO">${S_PARAMS} = catalogue=false</msg>
+<status status="PASS" endtime="20180716 11:56:00.195" starttime="20180716 11:56:00.194"></status>
 </kw>
-<status status="PASS" endtime="20180713 11:24:22.501" starttime="20180713 11:24:22.501"></status>
+<status status="PASS" endtime="20180716 11:56:00.195" starttime="20180716 11:56:00.194"></status>
 </kw>
 <kw name="Create_Request_Session" library="Common">
 <arguments>
@@ -129,10 +137,10 @@
 <arg>${session_uri}</arg>
 <arg>verify=True</arg>
 </arguments>
-<msg timestamp="20180713 11:24:22.502" level="INFO">Creating Session using : alias=httpbin, url=https://api.tmsandbox.co.nz, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<status status="PASS" endtime="20180713 11:24:22.502" starttime="20180713 11:24:22.502"></status>
+<msg timestamp="20180716 11:56:00.197" level="INFO">Creating Session using : alias=httpbin, url=https://api.tmsandbox.co.nz, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" endtime="20180716 11:56:00.198" starttime="20180716 11:56:00.196"></status>
 </kw>
-<status status="PASS" endtime="20180713 11:24:22.502" starttime="20180713 11:24:22.501"></status>
+<status status="PASS" endtime="20180716 11:56:00.198" starttime="20180716 11:56:00.196"></status>
 </kw>
 <kw name="Send_GET_Request" library="Common">
 <arguments>
@@ -152,17 +160,17 @@
 <assign>
 <var>${r}</var>
 </assign>
-<msg timestamp="20180713 11:24:29.232" level="INFO">Get Request using : alias=httpbin, uri=/v1/Categories/6327/Details.json, headers=None json=None</msg>
-<msg timestamp="20180713 11:24:29.232" level="INFO">${r} = &lt;Response [200]&gt;</msg>
-<status status="PASS" endtime="20180713 11:24:29.233" starttime="20180713 11:24:22.503"></status>
+<msg timestamp="20180716 11:56:03.386" level="INFO">Get Request using : alias=httpbin, uri=/v1/Categories/6327/Details.json, headers=None json=None</msg>
+<msg timestamp="20180716 11:56:03.386" level="INFO">${r} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180716 11:56:03.386" starttime="20180716 11:56:00.199"></status>
 </kw>
 <kw name="Delete All Sessions" library="RequestsLibrary">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20180713 11:24:29.233" level="INFO">Delete All Sessions</msg>
-<status status="PASS" endtime="20180713 11:24:29.233" starttime="20180713 11:24:29.233"></status>
+<msg timestamp="20180716 11:56:03.387" level="INFO">Delete All Sessions</msg>
+<status status="PASS" endtime="20180716 11:56:03.387" starttime="20180716 11:56:03.386"></status>
 </kw>
-<msg timestamp="20180713 11:24:29.234" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" endtime="20180713 11:24:29.234" starttime="20180713 11:24:22.503"></status>
+<msg timestamp="20180716 11:56:03.387" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180716 11:56:03.387" starttime="20180716 11:56:00.198"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -190,8 +198,8 @@
 <assign>
 <var>${json}</var>
 </assign>
-<msg timestamp="20180713 11:24:29.236" level="INFO">${json} = {u'CanListClassifieds': True, u'Promotions': [{u'Description': u'Lowest position in category', u'Price': 0.0, u'MinimumPhotoCount': 0, u'Id': 1, u'Name': u'Basic'}, {u'MinimumPhotoCount': 0, u'Descrip...</msg>
-<status status="PASS" endtime="20180713 11:24:29.236" starttime="20180713 11:24:29.235"></status>
+<msg timestamp="20180716 11:56:03.391" level="INFO">${json} = {u'CanListClassifieds': True, u'Promotions': [{u'Description': u'Lowest position in category', u'Price': 0.0, u'MinimumPhotoCount': 0, u'Id': 1, u'Name': u'Basic'}, {u'MinimumPhotoCount': 0, u'Descrip...</msg>
+<status status="PASS" endtime="20180716 11:56:03.391" starttime="20180716 11:56:03.390"></status>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
@@ -202,9 +210,9 @@
 <assign>
 <var>${desc}</var>
 </assign>
-<msg timestamp="20180713 11:24:29.237" level="INFO">${desc} = Good position in category 
+<msg timestamp="20180716 11:56:03.391" level="INFO">${desc} = Good position in category 
 2x larger image in desktop site search results</msg>
-<status status="PASS" endtime="20180713 11:24:29.237" starttime="20180713 11:24:29.236"></status>
+<status status="PASS" endtime="20180716 11:56:03.392" starttime="20180716 11:56:03.391"></status>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <doc>Converts the given item to a Unicode string.</doc>
@@ -214,8 +222,8 @@
 <assign>
 <var>${canRelist_result}</var>
 </assign>
-<msg timestamp="20180713 11:24:29.237" level="INFO">${canRelist_result} = True</msg>
-<status status="PASS" endtime="20180713 11:24:29.237" starttime="20180713 11:24:29.237"></status>
+<msg timestamp="20180716 11:56:03.392" level="INFO">${canRelist_result} = True</msg>
+<status status="PASS" endtime="20180716 11:56:03.393" starttime="20180716 11:56:03.392"></status>
 </kw>
 <kw name="Convert To Lowercase" library="String">
 <doc>Converts string to lowercase.</doc>
@@ -225,8 +233,8 @@
 <assign>
 <var>${canRelist_result}</var>
 </assign>
-<msg timestamp="20180713 11:24:29.238" level="INFO">${canRelist_result} = true</msg>
-<status status="PASS" endtime="20180713 11:24:29.238" starttime="20180713 11:24:29.238"></status>
+<msg timestamp="20180716 11:56:03.393" level="INFO">${canRelist_result} = true</msg>
+<status status="PASS" endtime="20180716 11:56:03.393" starttime="20180716 11:56:03.393"></status>
 </kw>
 <kw name="Convert To Lowercase" library="String">
 <doc>Converts string to lowercase.</doc>
@@ -236,8 +244,8 @@
 <assign>
 <var>${canRelist_data}</var>
 </assign>
-<msg timestamp="20180713 11:24:29.238" level="INFO">${canRelist_data} = true</msg>
-<status status="PASS" endtime="20180713 11:24:29.238" starttime="20180713 11:24:29.238"></status>
+<msg timestamp="20180716 11:56:03.394" level="INFO">${canRelist_data} = true</msg>
+<status status="PASS" endtime="20180716 11:56:03.394" starttime="20180716 11:56:03.394"></status>
 </kw>
 <kw name="Dictionary Should Contain Item" library="Collections">
 <doc>An item of ``key``/``value`` must be found in a `dictionary`.</doc>
@@ -246,7 +254,7 @@
 <arg>Name</arg>
 <arg>${test_data["Name"]}</arg>
 </arguments>
-<status status="PASS" endtime="20180713 11:24:29.239" starttime="20180713 11:24:29.239"></status>
+<status status="PASS" endtime="20180716 11:56:03.395" starttime="20180716 11:56:03.394"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -254,54 +262,289 @@
 <arg>${canRelist_result}</arg>
 <arg>${canRelist_data}</arg>
 </arguments>
-<msg timestamp="20180713 11:24:29.239" level="INFO">Argument types are:
+<msg timestamp="20180716 11:56:03.396" level="INFO">Argument types are:
 &lt;type 'unicode'&gt;
 &lt;type 'str'&gt;</msg>
-<status status="PASS" endtime="20180713 11:24:29.239" starttime="20180713 11:24:29.239"></status>
+<status status="PASS" endtime="20180716 11:56:03.396" starttime="20180716 11:56:03.395"></status>
 </kw>
-<kw name="Should Contain Match" library="Collections">
-<doc>Fails if ``pattern`` is not found in ``list``.</doc>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
 <arguments>
-<arg>${json["Promotions"][1]}</arg>
+<arg>${json["Promotions"][1]["Description"]}</arg>
 <arg>${test_data["PromoGalleryDesc"]}</arg>
 </arguments>
-<msg timestamp="20180713 11:24:29.240" level="FAIL">[ MinimumPhotoCount | Description | Price | OriginalPrice | Id | Name ] does not contain match for pattern '2x larger image'.</msg>
-<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:29.240"></status>
+<status status="PASS" endtime="20180716 11:56:03.397" starttime="20180716 11:56:03.396"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:29.235"></status>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>--Carbon Credits Positive Asserts Complete</arg>
+</arguments>
+<status status="PASS" endtime="20180716 11:56:03.398" starttime="20180716 11:56:03.397"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:29.234"></status>
+<status status="PASS" endtime="20180716 11:56:03.398" starttime="20180716 11:56:03.389"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.500"></status>
+<status status="PASS" endtime="20180716 11:56:03.398" starttime="20180716 11:56:03.388"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.500"></status>
+<status status="PASS" endtime="20180716 11:56:03.398" starttime="20180716 11:56:00.193"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.500"></status>
+<status status="PASS" endtime="20180716 11:56:03.398" starttime="20180716 11:56:00.192"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.500"></status>
+<status status="PASS" endtime="20180716 11:56:03.398" starttime="20180716 11:56:00.191"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.496"></status>
+<status status="PASS" endtime="20180716 11:56:03.399" starttime="20180716 11:56:00.189"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.496"></status>
+<status status="PASS" endtime="20180716 11:56:03.399" starttime="20180716 11:56:00.178"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.241" critical="yes" starttime="20180713 11:24:22.496">[ MinimumPhotoCount | Description | Price | OriginalPrice | Id | Name ] does not contain match for pattern '2x larger image'.</status>
+<kw type="foritem" name="${DATA_ROW} = {'Execute': 'yes', 'TestDescription': 'Negative Test', 'ErrorMessage': '404 - File or directory not found.', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev...">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${D_DATASET}</arg>
+<arg>${DATA_ROW}</arg>
+</arguments>
+<msg timestamp="20180716 11:56:03.400" level="INFO">${D_DATASET} = {'Execute': 'yes', 'TestDescription': 'Negative Test', 'ErrorMessage': '404 - File or directory not found.', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev...</msg>
+<status status="PASS" endtime="20180716 11:56:03.400" starttime="20180716 11:56:03.399"></status>
+</kw>
+<kw name="Initialise_Environment" library="Initialise">
+<arguments>
+<arg>${D_DATASET}</arg>
+</arguments>
+<kw name="Convert To Lowercase" library="String">
+<doc>Converts string to lowercase.</doc>
+<arguments>
+<arg>${data["TestEnvironment"]}</arg>
+</arguments>
+<assign>
+<var>${Env}</var>
+</assign>
+<msg timestamp="20180716 11:56:03.401" level="INFO">${Env} = devneg</msg>
+<status status="PASS" endtime="20180716 11:56:03.401" starttime="20180716 11:56:03.401"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Env}' == 'dev'</arg>
+<arg>SetDev_Environment</arg>
+</arguments>
+<status status="PASS" endtime="20180716 11:56:03.402" starttime="20180716 11:56:03.401"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Env}' == 'devneg'</arg>
+<arg>SetDevNeg_Environment</arg>
+</arguments>
+<kw name="SetDevNeg_Environment" library="Initialise">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${S_URL_Srv}</arg>
+<arg>api.tmsandbox.co.nz</arg>
+</arguments>
+<msg timestamp="20180716 11:56:03.404" level="INFO">${S_URL_Srv} = api.tmsandbox.co.nz</msg>
+<status status="PASS" endtime="20180716 11:56:03.404" starttime="20180716 11:56:03.403"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${S_URL_Env}</arg>
+<arg>/v1/Categories/6327/Details.json/</arg>
+</arguments>
+<msg timestamp="20180716 11:56:03.405" level="INFO">${S_URL_Env} = /v1/Categories/6327/Details.json/</msg>
+<status status="PASS" endtime="20180716 11:56:03.405" starttime="20180716 11:56:03.404"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${S_SESSION_URI}</arg>
+<arg>https://${S_URL_Srv}</arg>
+</arguments>
+<msg timestamp="20180716 11:56:03.406" level="INFO">${S_SESSION_URI} = https://api.tmsandbox.co.nz</msg>
+<status status="PASS" endtime="20180716 11:56:03.406" starttime="20180716 11:56:03.405"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:03.406" starttime="20180716 11:56:03.403"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:03.406" starttime="20180716 11:56:03.402"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:03.406" starttime="20180716 11:56:03.400"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${D_DATASET["Execute"]}' == 'yes'</arg>
+<arg>Assessment_E2E</arg>
+</arguments>
+<kw name="Assessment_E2E">
+<kw name="Carbon Credits">
+<kw name="Carbon_Credits" library="API_Calls">
+<arguments>
+<arg>${D_DATASET}</arg>
+</arguments>
+<kw name="Set_Params" library="Common">
+<arguments>
+<arg>catalogue=false</arg>
+</arguments>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${S_PARAMS}</arg>
+<arg>${params}</arg>
+</arguments>
+<msg timestamp="20180716 11:56:03.411" level="INFO">${S_PARAMS} = catalogue=false</msg>
+<status status="PASS" endtime="20180716 11:56:03.411" starttime="20180716 11:56:03.410"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:03.411" starttime="20180716 11:56:03.409"></status>
+</kw>
+<kw name="Create_Request_Session" library="Common">
+<arguments>
+<arg>${S_SESSION_URI}</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>httpbin</arg>
+<arg>${session_uri}</arg>
+<arg>verify=True</arg>
+</arguments>
+<msg timestamp="20180716 11:56:03.412" level="INFO">Creating Session using : alias=httpbin, url=https://api.tmsandbox.co.nz, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" endtime="20180716 11:56:03.413" starttime="20180716 11:56:03.412"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:03.413" starttime="20180716 11:56:03.411"></status>
+</kw>
+<kw name="Send_GET_Request" library="Common">
+<arguments>
+<arg>${S_URL_Env}</arg>
+<arg>${S_PARAMS}</arg>
+</arguments>
+<assign>
+<var>${Response}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>httpbin</arg>
+<arg>${env}</arg>
+<arg>params=${params}</arg>
+</arguments>
+<assign>
+<var>${r}</var>
+</assign>
+<msg timestamp="20180716 11:56:06.698" level="INFO">Get Request using : alias=httpbin, uri=/v1/Categories/6327/Details.json/, headers=None json=None</msg>
+<msg timestamp="20180716 11:56:06.698" level="INFO">${r} = &lt;Response [404]&gt;</msg>
+<status status="PASS" endtime="20180716 11:56:06.698" starttime="20180716 11:56:03.414"></status>
+</kw>
+<kw name="Delete All Sessions" library="RequestsLibrary">
+<doc>Removes all the session objects</doc>
+<msg timestamp="20180716 11:56:06.699" level="INFO">Delete All Sessions</msg>
+<status status="PASS" endtime="20180716 11:56:06.699" starttime="20180716 11:56:06.699"></status>
+</kw>
+<msg timestamp="20180716 11:56:06.700" level="INFO">${Response} = &lt;Response [404]&gt;</msg>
+<status status="PASS" endtime="20180716 11:56:06.700" starttime="20180716 11:56:03.414"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Response.status_code}' == '200'</arg>
+<arg>Asserts.Carbon_Credits_Positive_Asserts</arg>
+<arg>${Response.text}</arg>
+<arg>${test_data}</arg>
+<arg>ELSE</arg>
+<arg>Asserts.Carbon_Credits_Negative_Asserts</arg>
+<arg>${Response.text}</arg>
+<arg>${test_data}</arg>
+</arguments>
+<kw name="Carbon_Credits_Negative_Asserts" library="Asserts">
+<arguments>
+<arg>${Response.text}</arg>
+<arg>${test_data}</arg>
+</arguments>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${json}</arg>
+<arg>${test_data["ErrorMessage"]}</arg>
+</arguments>
+<status status="PASS" endtime="20180716 11:56:06.703" starttime="20180716 11:56:06.703"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${json}</arg>
+</arguments>
+<msg timestamp="20180716 11:56:06.704" level="INFO">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/&gt;
+&lt;title&gt;404 - File or directory not found.&lt;/title&gt;
+&lt;style type="text/css"&gt;
+&lt;!--
+body{margin:0;font-size:.7em;font-family:Verdana, Arial, Helvetica, sans-serif;background:#EEEEEE;}
+fieldset{padding:0 15px 10px 15px;} 
+h1{font-size:2.4em;margin:0;color:#FFF;}
+h2{font-size:1.7em;margin:0;color:#CC0000;} 
+h3{font-size:1.2em;margin:10px 0 0 0;color:#000000;} 
+#header{width:96%;margin:0 0 0 0;padding:6px 2% 6px 2%;font-family:"trebuchet MS", Verdana, sans-serif;color:#FFF;
+background-color:#555555;}
+#content{margin:0 0 0 2%;position:relative;}
+.content-container{background:#FFF;width:96%;margin-top:8px;padding:10px;position:relative;}
+--&gt;
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="header"&gt;&lt;h1&gt;Server Error&lt;/h1&gt;&lt;/div&gt;
+&lt;div id="content"&gt;
+ &lt;div class="content-container"&gt;&lt;fieldset&gt;
+  &lt;h2&gt;404 - File or directory not found.&lt;/h2&gt;
+  &lt;h3&gt;The resource you are looking for might have been removed, had its name changed, or is temporarily unavailable.&lt;/h3&gt;
+ &lt;/fieldset&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</msg>
+<status status="PASS" endtime="20180716 11:56:06.704" starttime="20180716 11:56:06.704"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>--Carbon Credits Negative Asserts Complete</arg>
+</arguments>
+<status status="PASS" endtime="20180716 11:56:06.705" starttime="20180716 11:56:06.704"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:06.705" starttime="20180716 11:56:06.701"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:06.705" starttime="20180716 11:56:06.700"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:06.705" starttime="20180716 11:56:03.408"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:06.706" starttime="20180716 11:56:03.408"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:06.706" starttime="20180716 11:56:03.407"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:06.706" starttime="20180716 11:56:03.407"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:06.706" starttime="20180716 11:56:03.399"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:06.706" starttime="20180716 11:56:00.178"></status>
+</kw>
+<status status="PASS" endtime="20180716 11:56:06.706" critical="yes" starttime="20180716 11:56:00.177"></status>
 </test>
 <kw type="teardown" name="Delete All Sessions" library="RequestsLibrary">
 <doc>Removes all the session objects</doc>
-<msg timestamp="20180713 11:24:29.242" level="INFO">Delete All Sessions</msg>
-<status status="PASS" endtime="20180713 11:24:29.242" starttime="20180713 11:24:29.242"></status>
+<msg timestamp="20180716 11:56:06.708" level="INFO">Delete All Sessions</msg>
+<status status="PASS" endtime="20180716 11:56:06.708" starttime="20180716 11:56:06.707"></status>
 </kw>
-<status status="FAIL" endtime="20180713 11:24:29.242" starttime="20180713 11:24:22.337"></status>
+<status status="PASS" endtime="20180716 11:56:06.708" starttime="20180716 11:55:59.837"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Assessment E2E" pass="0">Assessment E2E</stat>
+<stat fail="0" id="s1" name="Assessment E2E" pass="1">Assessment E2E</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,2 +1,3 @@
-Execute,TestType,TestDescription,TestEnvironment,Params,Name,CanRelist,PromoGalleryDesc
-yes,Positive,Asserts Details,dev,catalogue=false,Carbon credits,true,2x larger image
+Execute,TestType,TestDescription,TestEnvironment,Params,Name,CanRelist,PromoGalleryDesc,ErrorMessage
+yes,Positive,Asserts Details,dev,catalogue=false,Carbon credits,true,2x larger image,
+yes,Negative,Negative Test,devNeg,catalogue=false,Carbon credits,true,2x larger image,404 - File or directory not found.

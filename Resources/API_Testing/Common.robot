@@ -2,7 +2,6 @@
 Library  RequestsLibrary
 Library  BuiltIn
 Library  Collections
-Library  DateTime
 
 *** Variables ***
 
