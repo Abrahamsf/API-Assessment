@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180713 11:24:22.335" generator="Robot 3.0.2 (Python 2.7.14 on darwin)">
+<suite source="/Users/Fuad/Documents/Development/RF Scripts/Assessment/Tests/Assessment_E2E.robot" id="s1" name="Assessment E2E">
+<kw type="setup" name="Read test data from CSV" library="Initialise">
+<kw name="Read Csv File To Associative" library="CSVLibrary">
+<doc>Read CSV file and return its content as a Python list of dictionaries.</doc>
+<arguments>
+<arg>${EXECDIR}/Data/AssessmentE2E_Data.csv</arg>
+</arguments>
+<assign>
+<var>@{test_data_dict}</var>
+</assign>
+<msg timestamp="20180713 11:24:22.495" level="INFO">@{test_data_dict} = [ {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestType': 'Positive', 'N...</msg>
+<status status="PASS" endtime="20180713 11:24:22.495" starttime="20180713 11:24:22.494"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{test_data}</arg>
+<arg>@{test_data_dict}</arg>
+</arguments>
+<msg timestamp="20180713 11:24:22.495" level="INFO">@{test_data} = [ {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestType': 'Positive', 'N...</msg>
+<status status="PASS" endtime="20180713 11:24:22.495" starttime="20180713 11:24:22.495"></status>
+</kw>
+<status status="PASS" endtime="20180713 11:24:22.496" starttime="20180713 11:24:22.494"></status>
+</kw>
+<test id="s1-t1" name="Run_Assessment_E2E">
+<kw type="for" name="${DATA_ROW} IN [ @{test_data} ]">
+<kw type="foritem" name="${DATA_ROW} = {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestType': 'Positive', 'Nam...">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${D_DATASET}</arg>
+<arg>${DATA_ROW}</arg>
+</arguments>
+<msg timestamp="20180713 11:24:22.497" level="INFO">${D_DATASET} = {'Execute': 'yes', 'TestDescription': 'Asserts Details', 'PromoGalleryDesc': '2x larger image', 'Params': 'catalogue=false', 'TestEnvironment': 'dev', 'CanRelist': 'true', 'TestType': 'Positive', 'Nam...</msg>
+<status status="PASS" endtime="20180713 11:24:22.497" starttime="20180713 11:24:22.496"></status>
+</kw>
+<kw name="Initialise_Environment" library="Initialise">
+<arguments>
+<arg>${D_DATASET}</arg>
+</arguments>
+<kw name="Convert To Lowercase" library="String">
+<doc>Converts string to lowercase.</doc>
+<arguments>
+<arg>${data["TestEnvironment"]}</arg>
+</arguments>
+<assign>
+<var>${Env}</var>
+</assign>
+<msg timestamp="20180713 11:24:22.497" level="INFO">${Env} = dev</msg>
+<status status="PASS" endtime="20180713 11:24:22.497" starttime="20180713 11:24:22.497"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Env}' == 'dev'</arg>
+<arg>SetDev_Environment</arg>
+</arguments>
+<kw name="SetDev_Environment" library="Initialise">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${S_URL_Srv}</arg>
+<arg>api.tmsandbox.co.nz</arg>
+</arguments>
+<msg timestamp="20180713 11:24:22.498" level="INFO">${S_URL_Srv} = api.tmsandbox.co.nz</msg>
+<status status="PASS" endtime="20180713 11:24:22.498" starttime="20180713 11:24:22.498"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${S_URL_Env}</arg>
+<arg>/v1/Categories/6327/Details.json</arg>
+</arguments>
+<msg timestamp="20180713 11:24:22.499" level="INFO">${S_URL_Env} = /v1/Categories/6327/Details.json</msg>
+<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.498"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${S_SESSION_URI}</arg>
+<arg>https://${S_URL_Srv}</arg>
+</arguments>
+<msg timestamp="20180713 11:24:22.499" level="INFO">${S_SESSION_URI} = https://api.tmsandbox.co.nz</msg>
+<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.499"></status>
+</kw>
+<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.498"></status>
+</kw>
+<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.498"></status>
+</kw>
+<status status="PASS" endtime="20180713 11:24:22.499" starttime="20180713 11:24:22.497"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${D_DATASET["Execute"]}' == 'yes'</arg>
+<arg>Assessment_E2E</arg>
+</arguments>
+<kw name="Assessment_E2E">
+<kw name="Carbon Credits">
+<kw name="Carbon_Credits" library="API_Calls">
+<arguments>
+<arg>${D_DATASET}</arg>
+</arguments>
+<kw name="Set_Params" library="Common">
+<arguments>
+<arg>catalogue=false</arg>
+</arguments>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${S_PARAMS}</arg>
+<arg>${params}</arg>
+</arguments>
+<msg timestamp="20180713 11:24:22.501" level="INFO">${S_PARAMS} = catalogue=false</msg>
+<status status="PASS" endtime="20180713 11:24:22.501" starttime="20180713 11:24:22.501"></status>
+</kw>
+<status status="PASS" endtime="20180713 11:24:22.501" starttime="20180713 11:24:22.501"></status>
+</kw>
+<kw name="Create_Request_Session" library="Common">
+<arguments>
+<arg>${S_SESSION_URI}</arg>
+</arguments>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>httpbin</arg>
+<arg>${session_uri}</arg>
+<arg>verify=True</arg>
+</arguments>
+<msg timestamp="20180713 11:24:22.502" level="INFO">Creating Session using : alias=httpbin, url=https://api.tmsandbox.co.nz, headers={},                     cookies=None, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<status status="PASS" endtime="20180713 11:24:22.502" starttime="20180713 11:24:22.502"></status>
+</kw>
+<status status="PASS" endtime="20180713 11:24:22.502" starttime="20180713 11:24:22.501"></status>
+</kw>
+<kw name="Send_GET_Request" library="Common">
+<arguments>
+<arg>${S_URL_Env}</arg>
+<arg>${S_PARAMS}</arg>
+</arguments>
+<assign>
+<var>${Response}</var>
+</assign>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the</doc>
+<arguments>
+<arg>httpbin</arg>
+<arg>${env}</arg>
+<arg>params=${params}</arg>
+</arguments>
+<assign>
+<var>${r}</var>
+</assign>
+<msg timestamp="20180713 11:24:29.232" level="INFO">Get Request using : alias=httpbin, uri=/v1/Categories/6327/Details.json, headers=None json=None</msg>
+<msg timestamp="20180713 11:24:29.232" level="INFO">${r} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180713 11:24:29.233" starttime="20180713 11:24:22.503"></status>
+</kw>
+<kw name="Delete All Sessions" library="RequestsLibrary">
+<doc>Removes all the session objects</doc>
+<msg timestamp="20180713 11:24:29.233" level="INFO">Delete All Sessions</msg>
+<status status="PASS" endtime="20180713 11:24:29.233" starttime="20180713 11:24:29.233"></status>
+</kw>
+<msg timestamp="20180713 11:24:29.234" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" endtime="20180713 11:24:29.234" starttime="20180713 11:24:22.503"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${Response.status_code}' == '200'</arg>
+<arg>Asserts.Carbon_Credits_Positive_Asserts</arg>
+<arg>${Response.text}</arg>
+<arg>${test_data}</arg>
+<arg>ELSE</arg>
+<arg>Asserts.Carbon_Credits_Negative_Asserts</arg>
+<arg>${Response.text}</arg>
+<arg>${test_data}</arg>
+</arguments>
+<kw name="Carbon_Credits_Positive_Asserts" library="Asserts">
+<arguments>
+<arg>${Response.text}</arg>
+<arg>${test_data}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>json.loads('''${json}''')</arg>
+<arg>json</arg>
+</arguments>
+<assign>
+<var>${json}</var>
+</assign>
+<msg timestamp="20180713 11:24:29.236" level="INFO">${json} = {u'CanListClassifieds': True, u'Promotions': [{u'Description': u'Lowest position in category', u'Price': 0.0, u'MinimumPhotoCount': 0, u'Id': 1, u'Name': u'Basic'}, {u'MinimumPhotoCount': 0, u'Descrip...</msg>
+<status status="PASS" endtime="20180713 11:24:29.236" starttime="20180713 11:24:29.235"></status>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<arguments>
+<arg>${json["Promotions"][1]}</arg>
+<arg>Description</arg>
+</arguments>
+<assign>
+<var>${desc}</var>
+</assign>
+<msg timestamp="20180713 11:24:29.237" level="INFO">${desc} = Good position in category 
+2x larger image in desktop site search results</msg>
+<status status="PASS" endtime="20180713 11:24:29.237" starttime="20180713 11:24:29.236"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${json["CanRelist"]}</arg>
+</arguments>
+<assign>
+<var>${canRelist_result}</var>
+</assign>
+<msg timestamp="20180713 11:24:29.237" level="INFO">${canRelist_result} = True</msg>
+<status status="PASS" endtime="20180713 11:24:29.237" starttime="20180713 11:24:29.237"></status>
+</kw>
+<kw name="Convert To Lowercase" library="String">
+<doc>Converts string to lowercase.</doc>
+<arguments>
+<arg>${canRelist_result}</arg>
+</arguments>
+<assign>
+<var>${canRelist_result}</var>
+</assign>
+<msg timestamp="20180713 11:24:29.238" level="INFO">${canRelist_result} = true</msg>
+<status status="PASS" endtime="20180713 11:24:29.238" starttime="20180713 11:24:29.238"></status>
+</kw>
+<kw name="Convert To Lowercase" library="String">
+<doc>Converts string to lowercase.</doc>
+<arguments>
+<arg>${test_data["CanRelist"]}</arg>
+</arguments>
+<assign>
+<var>${canRelist_data}</var>
+</assign>
+<msg timestamp="20180713 11:24:29.238" level="INFO">${canRelist_data} = true</msg>
+<status status="PASS" endtime="20180713 11:24:29.238" starttime="20180713 11:24:29.238"></status>
+</kw>
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key``/``value`` must be found in a `dictionary`.</doc>
+<arguments>
+<arg>${json}</arg>
+<arg>Name</arg>
+<arg>${test_data["Name"]}</arg>
+</arguments>
+<status status="PASS" endtime="20180713 11:24:29.239" starttime="20180713 11:24:29.239"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${canRelist_result}</arg>
+<arg>${canRelist_data}</arg>
+</arguments>
+<msg timestamp="20180713 11:24:29.239" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'str'&gt;</msg>
+<status status="PASS" endtime="20180713 11:24:29.239" starttime="20180713 11:24:29.239"></status>
+</kw>
+<kw name="Should Contain Match" library="Collections">
+<doc>Fails if ``pattern`` is not found in ``list``.</doc>
+<arguments>
+<arg>${json["Promotions"][1]}</arg>
+<arg>${test_data["PromoGalleryDesc"]}</arg>
+</arguments>
+<msg timestamp="20180713 11:24:29.240" level="FAIL">[ MinimumPhotoCount | Description | Price | OriginalPrice | Id | Name ] does not contain match for pattern '2x larger image'.</msg>
+<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:29.240"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:29.235"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:29.234"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.500"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.500"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.500"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.500"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.496"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.241" starttime="20180713 11:24:22.496"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.241" critical="yes" starttime="20180713 11:24:22.496">[ MinimumPhotoCount | Description | Price | OriginalPrice | Id | Name ] does not contain match for pattern '2x larger image'.</status>
+</test>
+<kw type="teardown" name="Delete All Sessions" library="RequestsLibrary">
+<doc>Removes all the session objects</doc>
+<msg timestamp="20180713 11:24:29.242" level="INFO">Delete All Sessions</msg>
+<status status="PASS" endtime="20180713 11:24:29.242" starttime="20180713 11:24:29.242"></status>
+</kw>
+<status status="FAIL" endtime="20180713 11:24:29.242" starttime="20180713 11:24:22.337"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Assessment E2E" pass="0">Assessment E2E</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

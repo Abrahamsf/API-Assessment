@@ -1,0 +1,2 @@
+Execute,TestType,TestDescription,TestEnvironment,Params,Name,CanRelist,PromoGalleryDesc
+yes,Positive,Asserts Details,dev,catalogue=false,Carbon credits,true,2x larger image
